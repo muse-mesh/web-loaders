@@ -1,11 +1,20 @@
 const words = [
-    'Something is happening. Please wait.',
-    'Please be patient. This may take a while.',
-    'While you wait, please consider that this is a good time to take a break.',
-    'Please wait. This is a good time to go grab a cup of coffee.',
-    'Sometimes the things that are worth waiting for take time.',
-    'Please wait. This is a good time to stretch your legs.',
-    'Posture check! Please wait while we load the application.',
+  "Booting up some neural noodles... hang tight!",
+  "Mume is getting ready to chat about anything and everything.",
+  "Warming up the conversation engine — almost there.",
+  "Polishing thoughts, stretching our neurons... please wait.",
+  "First time? We're excited to meet you! Almost ready.",
+  "Loading up smart thoughts for brilliant conversations.",
+  "Tuning our thinking cap... shouldn't take long.",
+  "Your curiosity is safe here. Waking up the mind now.",
+  "Welcome aboard. We're setting the table for a great chat.",
+  "Getting into a creative mindset... one thought at a time.",
+  "Shuffling knowledge decks... preparing your assistant.",
+  "Mume is clearing its throat — almost ready to talk.",
+  "While we load, think of something cool to ask us.",
+  "Good things take a few seconds. Intelligent things take a few more.",
+  "Your AI is getting its thoughts together — standby.",
+  "Initiating thought protocols... conversation loading.",
 ];
 
 const loaderWidget = `
