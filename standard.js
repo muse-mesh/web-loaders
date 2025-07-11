@@ -28,8 +28,8 @@ const criticalLoaderCss = `
   .shadcn-loader-container {
     display: flex;
     flex-direction: column;
-    align-items: end;
-    justify-content: end;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background-color: #09090b;
@@ -42,6 +42,35 @@ const criticalLoaderCss = `
     transition: opacity 500ms;
     opacity: 1;
     pointer-events: initial;
+  }
+  .mumeai-anim {
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #3c83f6, #a259f7, #3c83f6);
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: shine 2s linear infinite;
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+  }
+  @keyframes shine {
+    to { background-position: 200% center; }
+  }
+  .dot-bounce {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #3c83f6;
+    border-radius: 50%;
+    margin: 0 2px;
+    animation: bounce 1s infinite alternate;
+  }
+  .dot-bounce:nth-child(2) { animation-delay: 0.2s; }
+  .dot-bounce:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes bounce {
+    to { transform: translateY(-12px); opacity: 0.5; }
   }
   .shadcn-loader-bar {
     height: 7px;
@@ -57,12 +86,17 @@ const styleTag = document.createElement("style");
 styleTag.appendChild(document.createTextNode(criticalLoaderCss));
 document.head.appendChild(styleTag);
 
-// 3. Use a single container for loader and bar
+// 3. Use a single container for loader and bar, with animated mume.ai text
 const loaderDiv = document.createElement("div");
 loaderDiv.className = "shadcn-loader-container";
 loaderDiv.innerHTML = `
-  Loading Application...
-  <div id="words" style="font-size: 16px; opacity: 0.6; font-weight: 300; text-align: right; margin-top: 4px">
+  <div class="mumeai-anim">mume.ai</div>
+  <div style="margin-bottom: 18px;">
+    <span class="dot-bounce"></span>
+    <span class="dot-bounce"></span>
+    <span class="dot-bounce"></span>
+  </div>
+  <div id="words" style="font-size: 16px; opacity: 0.6; font-weight: 300; text-align: center; margin-bottom: 8px; max-width: 90vw;">
     ${words[Math.floor(Math.random() * words.length)]}
   </div>
   <div class="shadcn-loader-bar"></div>
