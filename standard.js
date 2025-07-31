@@ -19,7 +19,7 @@ const words = [
 
 const loaderWidget = `
 <div style="padding-right: 32px; padding-bottom: 32px; font-smooth: always; display: flex; flex-direction: column; align-items: end">
-    Loading Application...
+    Loading Mume...
     <div id="words" style="font-size: 16px; opacity: 0.6; font-weight: 300; text-align: right; margin-top: 4px">
     ${words[Math.floor(Math.random() * words.length)]}
     </div>
